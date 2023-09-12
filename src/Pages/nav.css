@@ -18,7 +18,7 @@
   nav {
     position: fixed;
     width: 100%;
-    background: #000;
+    background: #11101d;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -61,7 +61,7 @@
       left: -100%;
       top: 5%;
       flex-direction: column;
-      background: #000;
+      background: #11101d;
       width: 100%;
       text-align: center;
       transition: 0.25s;
