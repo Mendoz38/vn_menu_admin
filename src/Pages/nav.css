@@ -1,35 +1,17 @@
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Segoe UI";
-  }
-  li {
-    list-style: none;
-  }
-  .sidebar-title,
-  a,
-  a:visited {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  
+
+ 
   /**** NAVBAR ****/  
   nav {
     position: fixed;
+    top:0;
     width: 100%;
-    background: #11101d;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    font-size: calc(0.5rem + 1.5vw);
+    /* font-size: calc(0.5rem + 1.5vw); */
+    font-size: 20px;
     z-index: 9;
-  }
-  main {
-    position:relative;
-    top: 50px;
   }
   nav ul {
     display: flex;

@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import  { useState } from "react"
 import "./nav.css"
 
-function Nav() {
+
+const Nav = () => {
   const [showMenu, setShowMenu] = useState(false);
   const onClickShowMenu = () => {
     setShowMenu(!showMenu)
@@ -12,13 +13,13 @@ function Nav() {
       <h3 className="titre">Mon site &#9850;</h3>
       <ul>
         <li>
-          <a href="/">accueil</a>
+          <a href="/">Accueil</a>
         </li>
         <li>
-          <a href="/">boutique</a>
+          <a href="/">Boutique</a>
         </li>
         <li>
-          <a href="/">blog</a>
+          <a href="/">Blog</a>
         </li>
       </ul>
       <div id="icons" onClick={onClickShowMenu}></div>

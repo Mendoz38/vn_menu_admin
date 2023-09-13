@@ -3,7 +3,7 @@ import "./menu_sidebar.css";
 
 //import "bootstrap/dist/css/bootstrap.min.css";
 
-const Menu_sidebar = () => {
+const Menu_sidebar = (props) => {
 
   const [showMenu, setShowMenu] = useState(false);
   const onClickShowMenu = () => {

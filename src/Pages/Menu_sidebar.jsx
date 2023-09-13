@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./menu_sidebar.css";
 import items from "./../data/sidebar.json";
 
-function SidebarItem2({ item }) {
+
+const SidebarItem2 = ({ item }) => {
   return (
     <li>
       <a href={item.path || "#"}>
@@ -11,7 +12,8 @@ function SidebarItem2({ item }) {
     </li>
   );
 }
-function SidebarItem({ item }) {
+
+const SidebarItem = ({ item }) => {
   const [open, setOpen] = useState(false);
 
   if (item.childrens) {
@@ -52,10 +54,8 @@ export default function Menu_sidebar() {
   return (
     <>
       <div className={`sidebar ${showMenu ? "" : "close"}`}>
-        <div className="logo-details">
-          <div className="home-content" onClick={onClickShowMenu}>
+        <div className="logo-details" onClick={onClickShowMenu}>
             <i className="bx bx-menu"></i>
-          </div>
           <span className="logo_name">Vin Nat</span>
         </div>
 
@@ -69,7 +69,9 @@ export default function Menu_sidebar() {
               <div className="profile_name">Prem Shahi</div>
               <div className="job">Web Desginer</div>
             </div>
-            <i className="bx bx-log-out"></i>
+            <span className="deco">
+              <i className="bx bx-log-out"></i>
+            </span>
           </div>
         </ul>
       </div>
