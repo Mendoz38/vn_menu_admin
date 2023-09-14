@@ -12,40 +12,25 @@
                 "title": "Vignerons",
                 "icon": "bx bx-home",
                 "path": "/Vignerons",
-                "childrens": [
-                    {
-                        "title": "Ajouter",
-                        "icon": "bx bx-plus",
-                        "path": "/AjoutVignerons"
-                    }
-                ]
+                "plus": true,
+                "plusPath": "/Plus_Resto"
             },
             {
                 "title": "Fiches vignerons",
                 "icon": "bx bx-book-alt",
                 "path": "/about",
-                "childrens": [
-                    {
-                        "title": "Ajouter",
-                        "icon": "bx bx-plus",
-                        "path": "/"
-                    }
-                ]
+                "plus": true,
+                "plusPath": "/Plus_Resto"
             },
             {
                 "title": "Analyses",
                 "icon": "bx bx-phone-fill",
                 "path": "/about",
-                "childrens": [
-                    {
-                        "title": "Ajouter",
-                        "icon": "bx bx-plus",
-                        "path": "/"
-                    }
-                ]
+                "plus": true,
+                "plusPath": "/Plus_Resto"
             },
             {
-                "title": "No child !!!",
+                "title": "No ++++ !!!",
                 "icon": "bx bx-phone-fill",
                 "path": "/about"
             }
@@ -101,30 +86,7 @@
                 "path": "/profile"
             },
             {
-                "title": "Settings",
-                "childrens": [
-                    {
-                        "title": "Account",
-                        "path": "/settings/account"
-                    },
-                    {
-                        "title": "Billing",
-                        "childrens": [
-                            {
-                                "title": "Payment",
-                                "path": "/settings/billing/payment"
-                            },
-                            {
-                                "title": "Subscription",
-                                "path": "/settings/billing/subscription"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Notifications",
-                        "path": "/settings/notifications"
-                    }
-                ]
+                "title": "Settings"
             },
             {
                 "title": "Logout",

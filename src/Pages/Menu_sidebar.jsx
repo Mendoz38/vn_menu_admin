@@ -2,30 +2,42 @@ import { useState } from "react";
 import "./menu_sidebar.css";
 import items from "./../data/sidebar.json";
 
+
 const MenuNiveau1 = ({ item }) => {
   const [open, setOpen] = useState(false);
-
-  if (item.childrens) {
-    if (item.childrens.length === 1) {
-      return (
-        <li>
-         <div className="iocn-link" >
-          <a href="#">
-            {item.icon && <i className={item.icon}></i>}
-            <span className="link_name">{item.title}</span>
-          </a>
-            {item.childrens.map((child, index) => (
-              <SimplePlus key={index} item={child} />
-            ))}
-        </div>
-        </li>
-      );
-    }
-    else {
+  // il n'y a pas de sous menu
+  if (!item.childrens) {
     return (
-      <li className={open ? "showMenu" : ""}>
+      <li className=" n1 icon_plus">
+        {/* Vérifie si il y a le bouton + */}
+        {item.plus ? (
+          <div className="icon_plus">
+            <a href={item.path || "#"}>
+              {item.icon && <i className={item.icon}></i>}
+              <span className="link_name">{item.title}</span>
+            </a>
+            <a href={item.plusPath || "#"}>
+              {item.title && <i className="plus bx bx-plus"></i>}
+            </a>
+          </div>
+        ) : (
+          // il n'y a pas le bouton +
+          <div>
+            <a href={item.path || "#"}>
+              {item.icon && <i className={item.icon}></i>}
+              <span className="link_name">{item.title}</span>
+            </a>
+          </div>
+        )}
+      </li>
+    );
+
+// Il y a un sous-menu
+  } else {
+    return (
+      <li className={open ? " showMenu" : ""}>
         <div className="iocn-link" onClick={() => setOpen(!open)}>
-          <a href="#">
+          <a className="t2" href="#">
             {item.icon && <i className={item.icon}></i>}
             <span className="link_name">{item.title}</span>
           </a>
@@ -39,69 +51,42 @@ const MenuNiveau1 = ({ item }) => {
       </li>
     );
   }
-
-  } else {
-    return (
-      <li>
-        <a href={item.path || "#"}>
-          {item.icon && <i className={item.icon}></i>}
-          <span className="link_name">{item.title}</span>
-        </a>
-      </li>
-    );
-  }
 };
 
 const MenuNiveau2 = ({ item }) => {
   const [open, setOpen] = useState(false);
 
-  if (item.childrens) {
     return (
-      <li className={open ? "showMenu" : ""}>
+      <li className="n2">
         <div className="icon_plus" onClick={() => setOpen(!open)}>
-          <a href={item.path || "#"}>
+          <a className="t2" href={item.path || "#"}>
             <span>{item.title}</span>
           </a>
-            {item.childrens.map((child, index) => (
-              <MenuNiveau3 key={index} item={child} />
-            ))}
+          {item.plus ? (
+            <a className="icon_plus" href={item.plusPath || "#"}>
+              {item.title && <i className="plus bx bx-plus"></i>}
+            </a>
+          ) : (
+            <div></div>
+          )}
         </div>
       </li>
     );
-  } else {
-    return (
-      <li>
-        <a className="icon_plus" href={item.path || "#" }>
-          {item.title && <i className={item.title}></i>}
-        </a>
-      </li>
-    );
-  }
 };
 
-const MenuNiveau3 = ({ item }) => {
-  return (
-      <a href={item.path || "#"}>
-        {item.icon && <i className={`plus ${item.icon}`}></i>}
-      </a>
-   );
-};
 
-const SimplePlus = ({ item }) => {
-  return (
-      <a href={item.path || "#"}>
-        {item.icon && <i className={`simple_plus ${item.icon}`}></i>}
-      </a>
-  );
-};
 
 export default function Menu_sidebar() {
-
+  const [showMenu, setShowMenu] = useState(false);
+  const onClickShowMenu = () => {
+    setShowMenu(!showMenu)
+  }
+    
   return (
     <>
-      <div className={`menu_sidebar`}>
-        <div className="logo-details">
-          <div id="icon_side"></div>
+      <div  className={`menu_sidebar ${showMenu ? "close" : ""}`}>
+        <div className="logo-details" onClick={onClickShowMenu}>
+          <div id="icon_side" ></div>
           <span className="logo_name">Vin Nat</span>
         </div>
 
