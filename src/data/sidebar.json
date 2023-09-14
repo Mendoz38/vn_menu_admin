@@ -1,50 +1,78 @@
 [
     {
-        "title": "Dashboard",
-        "icon": "bx bx-grid-alt",
+        "title": "Mon Profil",
+        "icon": "bx bx-user",
         "path": "/support"
     },
     {
-        "title": "General",
+        "title": "Vignerons",
         "icon": "bx bx-collection",
         "childrens": [
             {
-                "title": "Home",
+                "title": "Vignerons",
                 "icon": "bx bx-home",
-                "path": "/"
-            },
-            {
-                "title": "About",
-                "icon": "bx bx-book-alt",
-                "path": "/about"
-            },
-            {
-                "title": "Contact",
-                "icon": "bx bx-phone-fill",
+                "path": "/Vignerons",
                 "childrens": [
                     {
-                        "title": "Facebook",
-                        "icon": "bx bx-facebook"
-                    },
-                    {
-                        "title": "Twitter",
-                        "icon": "bx bx-twitter"
-                    },
-                    {
-                        "title": "Instagram",
-                        "icon": "bx bx-instagram"
+                        "title": "Ajouter",
+                        "icon": "bx bx-plus",
+                        "path": "/AjoutVignerons"
                     }
                 ]
             },
             {
-                "title": "FAQ",
-                "icon": "bx bx-question-circle-fill"
+                "title": "Fiches vignerons",
+                "icon": "bx bx-book-alt",
+                "path": "/about",
+                "childrens": [
+                    {
+                        "title": "Ajouter",
+                        "icon": "bx bx-plus",
+                        "path": "/"
+                    }
+                ]
+            },
+            {
+                "title": "Analyses",
+                "icon": "bx bx-phone-fill",
+                "path": "/about",
+                "childrens": [
+                    {
+                        "title": "Ajouter",
+                        "icon": "bx bx-plus",
+                        "path": "/"
+                    }
+                ]
+            },
+            {
+                "title": "No child !!!",
+                "icon": "bx bx-phone-fill",
+                "path": "/about"
             }
         ]
     },
     {
+        "title": "Salons",
+        "icon": "bx bx-home",
+        "path": "/support",
+        "childrens": [
+            {
+                "title": "Login",
+                "icon": "bx bx-plus",
+                "path": "/login"
+            }
+        ]
+    },
+    {
+        "title": "Caviste/Resto",
+        "icon": "bx bx-coffee",
+        "path": "/support",
+        "plus": true,
+        "plusPath": "/Plus_Resto"
+    },
+    {
         "title": "Account",
-        "icon": "bx bx-pie-chart-alt-2",
+        "icon": "bx bx-plus-medical",
         "childrens": [
             {
                 "title": "Login",
@@ -63,11 +91,6 @@
                 "path": "/reset-password"
             }
         ]
-    },
-    {
-        "title": "Support",
-        "icon": "bx bx-home",
-        "path": "/support"
     },
     {
         "title": "Profile",
