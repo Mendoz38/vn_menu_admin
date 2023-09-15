@@ -1,7 +1,7 @@
 
  
-  /**** NAVBAR ****/  
-  nav {
+  /**** headerBAR ****/  
+  header {
     position: fixed;
     top:0;
     width: 100%;
@@ -13,7 +13,7 @@
     font-size: 20px;
     z-index: 9;
   }
-  nav ul {
+  header ul {
     display: flex;
     justify-content: space-between;
     width: 60%;
@@ -38,7 +38,7 @@
     .active #icons:before {
       content: "\2715";
     }
-    nav ul {
+    header ul {
       position: fixed;
       left: -100%;
       top: 5%;
@@ -48,13 +48,13 @@
       text-align: center;
       transition: 0.25s;
     }
-    nav li {
+    header li {
       padding: 3px 0;
     }
-    nav li:hover {
+    header li:hover {
       background: #222121;
     }
-    nav.active ul {
+    header.active ul {
       left: 0;
     }
   }

@@ -84,7 +84,7 @@ export default function Menu_sidebar() {
     
   return (
     <>
-      <div  className={`menu_sidebar ${showMenu ? "close" : ""}`}>
+      <nav  className={`menu_sidebar ${showMenu ? "close" : ""}`}>
         <div className="logo-details" onClick={onClickShowMenu}>
           <div id="icon_side" ></div>
           <span className="logo_name">Vin Nat</span>
@@ -95,22 +95,8 @@ export default function Menu_sidebar() {
             <MenuNiveau1 key={index} item={item} />
           ))}
         </ul>
-        <div className="profile-details">
-          <div className="profile-content">
-            <img
-              src="https://www.vinsnaturels.fr/999_membres/img/faces/face-3.jpg"
-              alt="user"
-            />
-          </div>
-          <div className="name-job">
-            <div className="profile_name">Cédric Mendoza</div>
-            <div className="job">Web Desginer</div>
-          </div>
-          <span className="deco">
-            <i className="bx bx-log-out"></i>
-          </span>
-        </div>
-      </div>
+
+      </nav>
     </>
   );
 }

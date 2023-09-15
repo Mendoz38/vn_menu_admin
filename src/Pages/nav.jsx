@@ -9,7 +9,7 @@ const Nav = () => {
   }
 
   return (
-    <nav id="nav" className={`${showMenu ? "active" : ""}`}>
+    <header id="nav" className={`${showMenu ? "active" : ""}`}>
       <h3 className="titre">Mon site &#9850;</h3>
       <ul>
         <li>
@@ -23,7 +23,7 @@ const Nav = () => {
         </li>
       </ul>
       <div id="icons" onClick={onClickShowMenu}></div>
-    </nav>
+    </header>
   );
 }
 
